@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Dice game</title>
 </head>
 <body>
+  <div class=playerOne>
+    <div class="player-name">PLAYER 1</div>
+    <div class="global-score">0</div>
+    <div class="round-score-square">
+      <div class="round-score-title">Current</div>
+      <div class="round-score">0</div>
+    </div>
+  </div>
+  <img src="images/dice-2.png" alt="dice">
+  <div class=playerTwo>
+    <div class="player-name">PLAYER 2</div>
+    <div class="global-score">0</div>
+    <div class="round-score-square">
+      <div class="round-score-title">Current</div>
+      <div class="round-score">0</div>
+    </div>
+  </div>
+  <button>NEW GAME</button>
+  <button>ROLL DICE</button>
+  <button>HOLD</button>
   
 </body>
 </html>
