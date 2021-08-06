@@ -4,27 +4,130 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Lato', sans-serif;
-  font-weight: 100;
+  color: #2e2d2d;
+  font-weight: 300;
   position: relative;
 }
 
-.game-board {
-  width: 100vw;
-  background-color: white;
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-i, .global-score {
+.wrapper {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+/* ------------------Player Boards-----------------------*/
+.player-0-board,
+.player-1-board {
+    width: 50%;
+    float: left;
+    height: 700px;
+    padding: 100px;
+}
+
+.player-name {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.active .player-name::after {
+  content: "\2022";
+  font-size: 47px;
+  position: absolute;
   color: #de4c3c;
+  top: -7px;
+  right: 10px;
+}
+
+.active { background-color: #f2f0f0; }
+.active .player-name, .active .global-score { font-weight: 300; }
+
+.global-score {
+  color: #de4c3c;
+  font-size: 80px;
+  font-weight: 100;
+  margin-bottom: 130px;
+  text-align: center;
+}
+
+/*------------------Round score box-----------------------*/
+.player-round-box {
+  background-color: #de4c3c;
+  color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.20);
+}
+
+.round-score-title {
+  color: #2e2d2d;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.round-score {
+  font-size: 30px;
+}
+
+/*------------------Buttons-----------------------*/
+.btn-newGame { top: 45px;}
+.btn-rollDice { top: 403px;}
+.btn-hold { top: 467px;}
+
+button {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #2e2d2d;
+  background: none;
+  border: none;
+  font-size: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ion-icon {
+  color: #de4c3c;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 32px;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  transition: margin 0.3s;
 }
 
 img {
-  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 178px;
+  transform: translateX(-50%);
   height: 100px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.20);
 }
 
-.round-score-square1 {
-  width: 100px;
-}
-.round-score-square2 {
-  width: 100px;
-}
+/*------------------Animation-----------------------*/
+button:hover { font-weight: 600;}
+button:hover ion-icon { margin-top: 1px;}
+button:focus { outline: none;}
+
+
+.winner { background-color: #f2f0f0; }
+.winner .player-name { font-weight: 600; color: #de4c3c; }
+.winner .global-score { font-weight: 300;}

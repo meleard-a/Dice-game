@@ -4,52 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <title>Dice game</title>
 </head>
   <body>
-    <div class="container game-board text-center my-5 " >
-      <div class="row pb-5">
-        <button type="button" class="btn btn-white mt-5"><i class="bi bi-plus-circle"></i> NEW GAME</button>
-      </div>
-
-      <div class="row w-auto my-5 py-5">
-        <div class="col playerOne mb-5">
-          <div class="player-name fs-1">PLAYER 1</div>
-          <div class="global-score fs-2 pb-4">0</div>
-        </div>
-        <div class="col">
-          <img class="my-5" src="images/dice-2.png" alt="dice">
-        </div>
-        <div class="col playerTwo mb-5">
-          <div class="player-name fs-1">PLAYER 2</div>
-          <div class="global-score fs-2 pb-4">0</div>
+    <div class="wrapper clearfix">
+      <div class="player-0-board active">
+        <div class="player-name" id="name0">Player 1</div>
+        <div class="global-score" id="score0">43</div>
+        <div class="player-round-box">
+          <div class="round-score-title">CURRENT</div>
+          <div class="round-score" id="current0">11</div>
         </div>
       </div>
-      <div class="row w-auto my-5 py-5">
-        <div class="col">
-          <div class="round-score-square1 bg-danger bg-gradient mx-auto my-5">
-            <div class="round-score-title">Current</div>
-            <div class="round-score text-white fs-4 ">0</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="btn btn-white d-block mt-0 mb-5"><i class="bi bi-arrow-repeat "></i> ROLL DICE</div>
-          <div class="btn btn-white d-block"><i class="bi bi-box-arrow-in-down"></i> HOLD</div>    
-        </div>
-        <div class="col">
-          <div class="round-score-square2 bg-danger bg-gradient mx-auto my-5">
-            <div class="round-score-title ">Current</div>
-            <div class="round-score text-white fs-4">0</div>
-          </div>
-        </div> 
-      </div>
-
-    </div>
     
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <div class="player-1-board">
+        <div class="player-name" id="name1">Player 2</div>
+        <div class="global-score" id="score1">72</div>
+        <div class="player-round-box">
+          <div class="round-score-title">CURRENT</div>
+          <div class="round-score" id="current1">0</div>
+        </div>
+      </div>
+    
+      <button class="btn-newGame"><ion-icon name="add-circle-outline"></ion-icon>NEW GAME</button>
+      <button class="btn-rollDice"><ion-icon name="sync-outline"></ion-icon>ROLL DICE</button>
+      <button class="btn-hold"><ion-icon name="download-outline"></ion-icon>HOLD</button>
+    
+      <img src="images/dice1.png" alt="Dice" class="dice">
+    </div>
+
+    <script src="index.js"></script> 
   </body>
 </html>
