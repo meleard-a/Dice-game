@@ -1,10 +1,10 @@
 body {
-  background-image: url('images/background.jpg');
+  background-image: url('images/minions.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Lato', sans-serif;
-  color: #2e2d2d;
+  color: #0c1944;
   font-weight: 300;
   position: relative;
 }
@@ -21,7 +21,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #d6e2da9a;
+  border-radius: 30px
 }
 
 /* ------------------Player Boards-----------------------*/
@@ -31,6 +32,11 @@ body {
     float: left;
     height: 700px;
     padding: 100px;
+    border-radius: 30px 0 0 30px;
+}
+
+.player-1-board {
+  border-radius: 0 30px 30px 0;
 }
 
 .player-name {
@@ -48,35 +54,36 @@ body {
   content: "\2022";
   font-size: 47px;
   position: absolute;
-  color: #de4c3c;
+  color: #ffd55e;
   top: -7px;
   right: 10px;
 }
 
-.active { background-color: #f2f0f0; }
-.active .player-name, .active .global-score { font-weight: 300; }
+.active { background-color: #14a3dcbe; }
+.active .player-name, .active .global-score { font-weight: 600; }
 
 .global-score {
-  color: #de4c3c;
+  color: #ffd55e;
   font-size: 80px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 130px;
   text-align: center;
 }
 
 /*------------------Round score box-----------------------*/
 .player-round-box {
-  background-color: #de4c3c;
-  color: #fff;
+  background-color: #ffd55e;
+  color: rgb(246, 249, 250);
   width: 40%;
   margin: 0 auto;
   padding: 12px;
   text-align: center;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.20);
+  border-radius: 15px;
 }
 
 .round-score-title {
-  color: #2e2d2d;
+  color: #0c1944;
   font-size: 12px;
   margin-bottom: 10px;
 }
@@ -95,7 +102,7 @@ button {
   width: 200px;
   left: 50%;
   transform: translateX(-50%);
-  color: #2e2d2d;
+  color: #0c1944;
   background: none;
   border: none;
   font-size: 15px;
@@ -103,7 +110,7 @@ button {
 }
 
 ion-icon {
-  color: #de4c3c;
+  color: #ffd55e;
   display: inline-block;
   margin-right: 15px;
   font-size: 32px;
@@ -120,6 +127,7 @@ img {
   transform: translateX(-50%);
   height: 100px;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.20);
+  border-radius: 30px;
 }
 
 /*------------------Animation-----------------------*/
@@ -129,5 +137,5 @@ button:focus { outline: none;}
 
 
 .winner { background-color: #f2f0f0; }
-.winner .player-name { font-weight: 600; color: #de4c3c; }
+.winner .player-name { font-weight: 600; color: #ffd55e; }
 .winner .global-score { font-weight: 300;}
