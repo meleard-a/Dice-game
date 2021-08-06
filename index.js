@@ -3,6 +3,7 @@ let diceSound = new Audio("sons/dice.wav");
 let dice1Sound = new Audio("sons/dice1.wav");
 let holdSound = new Audio("sons/hold.wav");
 let winnerSound = new Audio("sons/winner.wav");
+let newGameSound = new Audio("sons/newGame.wav");
       
 start();
 
@@ -56,11 +57,12 @@ document.querySelector('.btn-hold').addEventListener('click', () => {
 
 /* Button new game clicked => all the scores = 0 player 1 starting*/
 
-document.querySelector('.btn-newGame').addEventListener('click', start,);
+document.querySelector('.btn-newGame').addEventListener('click', () => start());
 
 // Functions--------------------------------------------------------------------------------------------------
 
 function start() {
+  newGameSound.play();
   gameOn = true;
   isPlaying = 0;
   roundScore = 0;
